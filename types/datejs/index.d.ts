@@ -64,7 +64,7 @@ interface DateConstructor {
 /** DateJS Public Instance Methods */
 interface Date {
     /** Adds(or subtracts) to the value of the year, month, day, hour, minute, second, millisecond of the date instance using given configuration object. Positive and Negative values allowed. */
-    add(config?: IDateJSLiteral): Date;
+    add(config?: Partial<IDateJSLiteral>): Date;
     /** Adds the specified number of milliseconds to this instance. */
     addMilliseconds(milliseconds: number): Date;
     /** Adds the specified number of seconds to this instance given the number of seconds to add.The number can be positive or negative. */
@@ -128,7 +128,7 @@ interface Date {
     /** Moves the date to the next nth occurrence of the dayOfWeek starting from the beginning of the month. The number (-1) is a magic number and will return the last occurrence of the dayOfWeek in the month. */
     moveToNthOccurrence(dayOfWeek: number, occurrence: number): Date;
     /** Set the value of year, month, day, hour, minute, second, millisecond of date instance using given configuration object. */
-    set(config: IDateJSLiteral): Date;
+    set(config: Partial<IDateJSLiteral>): Date;
     /** Set the timezone for the current date using a culture - specific timezone abbreviation("PST").Note that in most JavaScript implementations, this will appear to change the time since the timezone is always based on the locale. */
     setTimezone(timezoneAbbreviation: string): Date;
     /** Set the timezone for the current date using an offset(-0700).Note that in most JavaScript implementations, this will appear to change the time since the timezone is always based on the locale. */
